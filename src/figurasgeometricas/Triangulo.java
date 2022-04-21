@@ -4,8 +4,8 @@ import interfaz.IFiguraGeometrica;
 
 public class Triangulo implements IFiguraGeometrica {
 
-    Double lado;
-    int lados = 3;
+    private Double lado;
+    private int lados = 3;
 
     public Triangulo(Double lado) {
         this.lado = lado;
@@ -32,6 +32,22 @@ public class Triangulo implements IFiguraGeometrica {
     @Override
     public String numeroDeLados() {
         return "El triangulo tiene " + lados + " lados.";
+    }
+
+    public Double getLado() {
+        return lado;
+    }
+
+    public void setLado(Double lado) {
+        this.lado = lado;
+    }
+
+    public int getLados() {
+        return lados;
+    }
+
+    public void setLados(int lados) {
+        this.lados = lados;
     }
 
 }

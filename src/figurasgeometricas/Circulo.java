@@ -11,7 +11,7 @@ import interfaz.IFiguraGeometrica;
  * @author admin
  */
 public class Circulo implements IFiguraGeometrica {
-    Double radio;
+    private Double radio;
 
     public Circulo(Double radio) {
         this.radio = radio;
@@ -26,19 +26,27 @@ public class Circulo implements IFiguraGeometrica {
 
     @Override
     public Double calcularArea() {
-        Double area = VALOR_PI*(radio*radio);
+        Double area = Constantes.VALOR_PI*(radio*radio);
         return area; 
     }
 
     @Override
     public Double calcularPerimetro() {
-        Double perimetro = (VALOR_PI*2) * radio; 
+        Double perimetro = (Constantes.VALOR_PI*2) * radio; 
         return perimetro; 
     }
 
     @Override
     public String numeroDeLados() {
         return"El circulo no tiene lados";
+    }
+
+    public Double getRadio() {
+        return this.radio;
+    }
+
+    public void setRadio(Double radio) {
+        this.radio = radio;
     }
     
 }

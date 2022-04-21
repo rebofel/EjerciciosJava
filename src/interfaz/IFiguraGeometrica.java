@@ -10,8 +10,6 @@ package interfaz;
  */
 public interface IFiguraGeometrica {
     
-    Double VALOR_PI = 3.141592;
-    
    String nombreFigura();
    
    Double calcularArea(); 

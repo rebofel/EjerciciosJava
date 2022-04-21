@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Cuadrado implements IFiguraGeometrica {
 
     final int lados = 4;
-    Double lado;
+    private Double lado;
 
     public Cuadrado(Double lado) {
         this.lado = lado;
@@ -44,6 +44,14 @@ public class Cuadrado implements IFiguraGeometrica {
     public String numeroDeLados() {
         return "Tiene " + lados + " lados.";
 
+    }
+
+    public Double getLado() {
+        return this.lado;
+    }
+
+    public void setLado(Double lado) {
+        this.lado = lado;
     }
 
 }
